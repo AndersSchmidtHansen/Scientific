@@ -1,14 +1,33 @@
 {{!< default }}{{#post}}
 <article class="post" itemscope="" itemtype="//schema.org/Article" role="article">
-  <header class="post__header">
-    <time class="post__date" itemprop="datePublished">{{ date format="dddd DD MMM YYYY" }}</time>
-    <h1 class="post__title" itemprop="headline">
-      {{ title }}
-    </h1>
-  </header>
-  <section class="post__content" itemprop="articleBody">
-    {{ content }}
-  </section>
-  <footer class="post__footer"></footer>
+  <div class="row">
+    <div class="col-sm-8">
+      <header class="post__header">
+        <h1 class="post__title" itemprop="headline">
+          {{ title }}
+        </h1>
+      </header>
+      <section class="post__content" itemprop="articleBody">
+        {{ content }}
+      </section>
+      <footer class="post__footer"></footer>
+    </div>
+    <div class="col-sm-4">
+      <aside class="blog__meta boxed" itemscope="" itemtype="http://schema.org/Person">
+        <div class="blog__author-bio">
+          <img class="author__picture" itemprop="image" src="{{@blog.logo}}" />
+          <div class="h h--subheader" itemprop="name">
+            {{ author.name }}
+          </div>
+          <p class="author__bio" itemprop="description">
+            {{ author.bio }}
+          </p>
+          <div>
+            <a href="mailto:{{ author.email }}" itemprop="email" title="Write to {{ author.name }} by clicking here">{{ author.email }}</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
 </article>
 {{/post}}

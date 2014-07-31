@@ -36,9 +36,10 @@ h6,
   font-weight: $t__headline_weight;
 }
 
+h1 + h2:first-of-type { margin-top: 0; }
+
 h2 {
   font-size: 2.4rem;
-  &:first-of-type { margin-top: 0; }
   &:not(:first-of-type) { margin-top: 3.236rem; }
 }
 h3 {
@@ -48,9 +49,11 @@ h3 {
 }
 h4 { font-size: 1.618rem; margin-bottom: 1.618rem; }
 
-h2,
-h3,
-h4 { text-align: center; }
+.post-template:not(.page) {
+  h2,
+  h3,
+  h4 { text-align: center; }
+}
 
 a {
   color: $c__highlight;
@@ -70,6 +73,16 @@ a {
 
   &:hover { text-decoration: none; }
 }
+
+// Main Navigation
+.main-navigation {
+  a {
+    bottom: 1px;
+    font-size: 1.618rem !important;
+
+  }
+}
+
 
 blockquote {
   line-height: 1.618;
@@ -177,6 +190,26 @@ figure {
 
   } /// blog header
 
+  /*==========  Blog Meta  ==========*/
+  .blog__meta {
+    padding: 3.236rem;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow:
+    0 3px 0 0 rgba(0,0,0,.08),
+    inset 0 0 0 1px rgba(0,0,0,.08)
+    ;
+  }
+
+  /*==========  Blog Author Bio  ==========*/
+  .blog__author-bio {
+    .author__picture {
+      margin-bottom: 1.618rem;
+    }
+    .author__bio {
+      line-height: 1.618;
+    }
+  }
 
   /*==========  Blog Footer  ==========*/
   .blog__footer {
@@ -272,7 +305,7 @@ figure {
 
   .post-template.page {
     .post {
-
+      .post__title:first-of-type { margin-top: 0; }
     } /// the page itself
   } /// single pages
 

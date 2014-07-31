@@ -2,12 +2,21 @@
 | {{#post}}
 
 article.post role="article" itemscope="" itemtype="//schema.org/Article"
+  .row
+    .col-sm-8
+      header.post__header
+        h1.post__title itemprop="headline" {{ title }}
 
-  header.post__header
-    time.post__date itemprop="datePublished" {{ date format="dddd DD MMM YYYY" }}
-    h1.post__title itemprop="headline" {{ title }}
+      section.post__content itemprop="articleBody" {{ content }}
+      footer.post__footer
+    .col-sm-4
+      aside.blog__meta.boxed itemscope="" itemtype="http://schema.org/Person"
+        .blog__author-bio
+          img.author__picture src="{{@blog.logo}}" itemprop="image"
+          div.h.h--subheader itemprop="name" {{ author.name }}
+          p.author__bio itemprop="description" {{ author.bio }}
+          div
+            a href="mailto:{{ author.email }}" title="Write to {{ author.name }} by clicking here" itemprop="email" {{ author.email }}
 
-  section.post__content itemprop="articleBody" {{ content }}
-  footer.post__footer
 
 | {{/post}}

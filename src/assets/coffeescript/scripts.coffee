@@ -3,11 +3,11 @@
 #=================================================
 
 $ ->
-  $(".post__title").fitText 2.4, minFontSize : "22px", maxFontSize : "46px"
+  $(".post-template:not(.page) .post__title").fitText 2.4, minFontSize : "22px", maxFontSize : "46px"
 
   # Handle image captions and enlargments
   images = 0
-  for image in $ "img"
+  for image in $ ".post-template:not(.page) img"
     images++
     $(image)
     .attr "aria-describedby", "figcaption--#{images}"
@@ -19,7 +19,7 @@ $ ->
 
   # Handle footnotes
   scrollToAnchor = (aid) ->
-    aTag = $("a[name='#{aid}']")
+    aTag = $("a[name='#{aid}'], #{aid}")
     $("html,body").animate scrollTop : aTag.offset().top, 'slow'
 
   footnotesList = $(".post__footnotes")
@@ -31,12 +31,12 @@ $ ->
     $(tag).attr "href", hrefWithID
     footnotesList.append """
       <li class='footnote'>
-        <span name="#{hrefWithID}">[#{footnoteID}]</span> -
+        <a name="#{hrefWithID}">[#{footnoteID}]</a> -
         #{tag.title}
       </li>
     """
 
-  $('[href*="#fn"], .sidenav [href*="#"]').on "click", () ->
+  $('[href*="#fn"], .sidenav a').on "click", () ->
     scrollToAnchor $(this).attr "href"
 
 
@@ -52,10 +52,14 @@ $ ->
   sidebar = $ ".sidebar"
 
   # Add links to navbar
+  headlines = 0
+  headlinesTotal = $('.post-template .post h2, .post-template .post h3').length
   for headline in $ '.post-template .post h2, .post-template .post h3'
     $("#sidenav .nav").append "<li><a title='Click to jump to \"#{headline.textContent}\"' href='##{headline.id}'>#{headline.textContent}</a></li>"
-
-
+    headlines++
+    if headlines is headlinesTotal
+      $('.sidenav a').on "click", () ->
+        scrollToAnchor $(this).attr "href"
 
   $(".affix").affix()
     offset :
