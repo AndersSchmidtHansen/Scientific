@@ -27,3 +27,6 @@ articles online. To do so, the theme features the following:
 
 - Responsiveness. The "Scientific" theme has modest responsitivity and aims to cover the most common devices. If a device does not seem well-supported, feel free to file an issue here on [this GitHub repository](https://github.com/AndersSchmidtHansen/Scientific).
 
+
+### How do I install "Scientific"?
+Installing themes is very easy, simply follow [this guide](http://www.ghostforbeginners.com/how-to-upload-a-theme/) to get started.
