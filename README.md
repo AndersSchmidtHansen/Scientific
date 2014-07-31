@@ -2,6 +2,7 @@ Scientific
 ============================================================
 A free Ghost theme optimized for scientific journal articles
 
+[Download "Scientific" as a .zip file here](https://github.com/AndersSchmidtHansen/Scientific/blob/master/scientific_version_1_0.zip?raw=true)
 
 What's in the box?
 -------------------------------------------------------------
