@@ -1,8 +1,8 @@
-##THE JOURNEY TO DANVILLIERS. 1552
+##Abstract
 
-On his return from the expedition against the German camp [1](#fn "Ahlberg, P.E. 1990.  Glimpsing the hidden majority. Nature 344: 23."), King Henry besieged Danvilliers, and those within would not surrender. They got the worst of it, but our powder failed us; so they had a good shot at our men. There was a culverin-shot passed through the tent of H. de Rohan, which hit a gentleman leg who was of his household. I had to finish the cutting off of it, which I did without applying the hot irons.
+On his return from the expedition against the German camp[1](#fn "Ahlberg, P.E. 1990.  Glimpsing the hidden majority. Nature 344: 23."), King Henry besieged Danvilliers, and those within would not surrender. They got the worst of it, but our powder failed us; so they had a good shot at our men. There was a culverin-shot passed through the tent of H. de Rohan, which hit a gentleman leg who was of his household. I had to finish the cutting off of it, which I did without applying the hot irons.
 
-### The formula
+## Methods
 When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are:
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
@@ -21,7 +21,7 @@ So Guyard was buried. And those of Danvilliers, when they saw the breach large e
 
 The camp being dispersed, I returned to Paris with my gentleman whose leg I had cut off; I dressed him, and God healed him. I sent him to his house merry with a wooden leg; and he was content saying he had got off cheap, not to have been miserably burned to stop the blood, as you write in your book, won petit matetre,
 
-##THE JOURNEY TO CHATEAU LE COMTE. 1552
+## Discussion
 
 Some time after. King Henry raised an army of thirty thousand men, to go and lay waste the country about Hesdin. The King of Navarre, who was then called M. de Vendosme, was chief of the army, and the King's Lieutenant. Being at St. Denis, in France, waiting while the companies passed by, he sent to Paris for me to speak with him. When I came he begged me (and his request was a command) to follow him on this journey; and I, wishing to make my excuses, saying my wife was sick in bed, he made answer there were physicians in Pairs to cure her, and he, too, had left his wife, who was of as good a house as mine, and he said he would use me well, and forthwith ordered I should be attached to his household. Seeing this great desire he had to take me with him, I dared not refuse him.
 
@@ -35,4 +35,5 @@ Thence we went and burned several villages; and the barns were all full of grain
 
 {<2>}![The eukaryotic cell nucleus. Visible in this diagram are the ribosome-studded double membranes of the nuclear envelope, the DNA (complexed as chromatin), and the nucleolus. Within the cell nucleus is a viscous liquid called nucleoplasm, similar to the cytoplasm found outside the nucleus.](http://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagram_human_cell_nucleus.svg/280px-Diagram_human_cell_nucleus.svg.png)
 
+## Conclusion
 Then the King said he would take me into his service, and commanded M. de Goguier, his first physician, to write me down in the King's service as one of his surgeons-in-ordinary, and I was to meet him at Rheims within ten or twelve days: which I did. And the King did me the honour to command me to live near him, and he would be a good friend to me. Then I thanked him most humbly for the honour he was pleased to do me, in appointing me to serve him.
