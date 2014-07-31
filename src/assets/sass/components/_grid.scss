@@ -1,0 +1,21 @@
+/*=======================================================
+=            Kaidan - Theme Component - Grid            =
+=======================================================*/
+
+// Columns
+.columnized {
+  column-count: 1;
+  column-gap: 8rem;
+}
+
+@media only screen
+and (min-width : 0px)
+and (max-width : 680px) {
+  .columnized {
+    column-count: 1;
+    column-gap: 6rem;
+  }
+}
+
+/*-----  End of Kaidan - Theme Component - Grid  ------*/
+

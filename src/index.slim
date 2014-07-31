@@ -1,0 +1,21 @@
+| {{!< default }}
+
+| {{#foreach posts}}
+article.post role="article" itemscope="" itemtype="//schema.org/Article"
+
+  header.post__header
+    time.post__date.text--muted itemprop="datePublished" {{ date format="dddd DD MMM YYYY" }}
+    h1.post__title itemprop="headline"
+      a href="{{{ url }}}" title="Click to read: '{{ title }}'" rel="bookmark" {{ title }}
+
+  section.post__content itemprop="articleBody"
+    |  {{ excerpt }}...
+    a href="{{{ url }}}" title="Click to read: '{{ title }}'" rel="bookmark"  Read more
+  footer.post__footer
+
+| {{/foreach}}
+
+.blog__pagination
+  | {{#if pagination}}
+    {{ pagination }}
+  | {{/if}}

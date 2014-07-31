@@ -1,0 +1,284 @@
+/*======================================================
+=            Kaidan - Theme Base Stylesheet            =
+======================================================*/
+
+/*==========  Core  ==========*/
+html { font-size: 10px; } // Allows better font sizing with REMs
+body {
+  font-family      : $t__body_copy_font_stack;
+  font-size        : $t__default_font_size;
+  font-weight      : 400;
+  line-height      : $t__default_line_height;
+  color            : $c__base_text;
+  background-color : $c__primary;
+}
+
+.wrapper {
+  max-width: 102.4rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.inner-wrap {
+  max-width: 56rem;
+  margin: 3.618rem auto;
+}
+
+/*==========  Typography  ==========*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h {
+  font-family: $t__headline_font_stack;
+  font-weight: $t__headline_weight;
+}
+
+h2 {
+  font-size: 2.4rem;
+  &:first-of-type { margin-top: 0; }
+  &:not(:first-of-type) { margin-top: 3.236rem; }
+}
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  & + p { margin-top: 0; }
+}
+h4 { font-size: 1.618rem; margin-bottom: 1.618rem; }
+
+h2,
+h3,
+h4 { text-align: center; }
+
+a {
+  color: $c__highlight;
+
+  // Handle footnotes
+  &[href*="#fn"] {
+    vertical-align: super;
+    font-size: 1.1rem;
+    &:before { content: "[" }
+    &:after { content: "]" }
+  }
+  &[href*="#fn"],
+  &[name*="#fn"] {
+    font-family: $t__fineprint_font_stack;
+  }
+  &[name*="#fn"] { font-size: 1.4rem; }
+}
+
+blockquote {
+  line-height: 1.618;
+  border: 0;
+  /* Quotation Marks
+  These are not needed for blockquotes
+  in scientific papers, but I have
+  included them anyway.
+  p {
+    &:before,
+    &:after {
+      font-size: 2.8rem;
+      line-height: 1;
+    }
+    &:before { content: "“";}
+    &:after { content: "”"; }
+  }
+  */
+}
+
+// Media
+img,
+video,
+embed,
+iframe {
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+  padding: 0 1.618rem;
+
+  img { box-shadow: 0 0 0 1px rgba(0,0,0,.18); }
+
+  figcaption {
+    &:before {
+      counter-increment: figcaption;
+      content: "Figure " counter(figcaption) ". ";
+      font-weight: 700;
+      font-family: $t__fineprint_font_stack;
+    }
+
+    font-size: 1.3rem;
+    line-height: 1.618;
+
+  }
+}
+
+
+// MathJax
+.MathJax_Display { margin: 1.618rem 0 3.232rem 0 !important; }
+
+// Footnotes
+.post__footnotes { font-size: 1.4rem; }
+
+
+// Side Navigation
+.sidenav-container {
+  top: 1.25rem;
+  left: 1.25rem;
+
+  .nav {
+    padding: .5rem;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow:
+    0 3px 0 0 rgba(0,0,0,.08),
+    inset 0 0 0 1px rgba(0,0,0,.08)
+    ;
+
+    li a {
+      padding: .5rem 1rem;
+      font-size: 1.412rem;
+      &:hover { background-color: rgba(0,0,0,.025); }
+    }
+    .active {
+      border-right: 3px solid $c__highlight;
+    }
+  }
+}
+
+
+/*==========  Blog  ==========*/
+.blog {
+
+  /*==========  Blog Header  ==========*/
+  .blog__header {
+     padding-bottom: 1.618rem;
+     margin: 3.236rem 0;
+     border-bottom: 3px solid rgba(0,0,0,.18);
+
+    .blog__title {
+      font-size: 1.412rem;
+      line-height: 1.412;
+      a {
+        font-size: 2.4rem;
+      }
+    } /// blog title
+
+    .blog__description {
+
+    } /// blog description
+
+  } /// blog header
+
+
+  /*==========  Blog Footer  ==========*/
+  .blog__footer {
+    font-size: 1.412rem;
+    padding-top: 1.618rem;
+    margin: 4.6rem 0 2.236rem 0;
+    border-top: 3px solid rgba(0,0,0,.18);
+
+    .blog__copyright {
+
+    } /// blog copyright
+
+  } /// blog footer
+
+
+  /*==========  Post  ==========*/
+  .post {
+
+    // Counters
+    counter-reset: figcaption;
+
+    .post__header {
+
+      .post__date {
+
+      } /// post date
+
+      .post__title {
+        font-size: 4.2rem;
+        line-height: 1.412;
+        margin: 2rem 0;
+      } /// post title
+
+    } /// post header
+
+    .post__content {
+
+    } /// post content
+
+    .post__footer {
+      margin: 3.236rem 0;
+    } /// post footer
+
+  } /// post
+
+
+  /*==========  Templates  ==========*/
+  .home-template,
+  .archive-template {
+    .wrapper {
+      max-width: 72rem;
+    }
+    .post {
+      margin-bottom: 1.618rem;
+
+      .post__title {
+        font-size: 28.333333333333332px;
+        margin-top: .809rem;
+
+        &:hover a {
+          opacity: .75;
+        }
+        a {
+          transition: opacity .28s ease;
+        }
+      }
+
+      .post__content { margin-top: 0; }
+
+      &:not(:last-of-type) {
+        border-bottom: 3px solid rgba(0,0,0,.18);
+      }
+
+      & + .post {
+        margin-top: 3.236rem;
+      }
+    } /// posts on the home page
+  } /// home
+
+  .archive-template {
+    .post {
+
+    } /// posts on the archive page
+  } /// archive
+
+  .post-template {
+    .post {
+      .post__comments {
+        margin: 3.618rem auto;
+      }
+    } /// post
+  } /// single posts
+
+  .post-template.page {
+    .post {
+
+    } /// the page itself
+  } /// single pages
+
+  .tag-template {
+
+  } /// tag page
+
+} /// blog
+
+/*-----  End of Kaidan - Theme Base Stylesheet  ------*/
+

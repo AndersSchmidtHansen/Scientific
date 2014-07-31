@@ -1,0 +1,48 @@
+{{!< default }}{{#post}}
+<article class="post" itemscope="" itemtype="//schema.org/Article" role="article">
+  <header class="post__header text--center">
+    <time class="post__date text--muted" itemprop="datePublished">{{ date format="dddd DD MMM YYYY" }}</time>
+    <h1 class="post__title" itemprop="headline">
+      {{ title }}
+    </h1>
+    <em>By {{ author.name }}</em>
+  </header>
+  <div class="inner-wrap">
+    <section class="post__content columnized" itemprop="articleBody">
+      {{ content }}
+    </section>
+    <footer class="post__footer">
+      <h4 id="footnotes">
+        Footnotes
+      </h4>
+      <ul class="post__footnotes list-unstyled"></ul>
+      <div class="post__comments">
+        <h2 id="comments">
+          Comments
+        </h2>
+        <div id="disqus_thread">
+          <script type="text/javascript">
+            var disqus_shortname = 'example'; // required: replace example with your forum shortname
+            var disqus_identifier = '{{post.id}}';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+        </div>
+      </div>
+    </footer>
+  </div>
+</article>
+<aside class="sidenav-container hidden-xs hidden-sm affix">
+  <div class="sidenav" id="sidenav">
+    <div class="h h--smallheader">
+      Quick Nav
+    </div>
+    <ul class="nav"></ul>
+  </div>
+</aside>
+{{/post}}

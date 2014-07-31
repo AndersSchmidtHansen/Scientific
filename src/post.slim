@@ -1,0 +1,38 @@
+| {{!< default }}
+| {{#post}}
+
+article.post role="article" itemscope="" itemtype="//schema.org/Article"
+
+  header.post__header.text--center
+    time.post__date.text--muted itemprop="datePublished" {{ date format="dddd DD MMM YYYY" }}
+    h1.post__title itemprop="headline" {{ title }}
+    em By {{ author.name }}
+
+  div.inner-wrap
+    section.post__content.columnized itemprop="articleBody" {{ content }}
+    footer.post__footer
+      h4#footnotes Footnotes
+      ul.post__footnotes.list-unstyled
+
+      .post__comments
+        h2#comments Comments
+        #disqus_thread
+          javascript:
+            var disqus_shortname = 'example'; // required: replace example with your forum shortname
+            var disqus_identifier = '{{post.id}}';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+
+aside.sidenav-container.hidden-xs.hidden-sm.affix
+  .sidenav#sidenav
+    .h.h--smallheader Quick Nav
+    ul.nav
+
+
+
+| {{/post}}
