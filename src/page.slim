@@ -12,7 +12,7 @@ article.post role="article" itemscope="" itemtype="//schema.org/Article"
     .col-sm-4
       aside.blog__meta.boxed itemscope="" itemtype="http://schema.org/Person"
         .blog__author-bio
-          img.author__picture src="{{@blog.logo}}" itemprop="image"
+          img.author__picture src="{{author.image}}" itemprop="image"
           div.h.h--subheader itemprop="name" {{ author.name }}
           p.author__bio itemprop="description" {{ author.bio }}
           div
