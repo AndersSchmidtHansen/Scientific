@@ -67,6 +67,8 @@ a {
     font-family: $t__fineprint_font_stack;
   }
   &[name*="#fn"] { font-size: 1.4rem; }
+
+  &:hover { text-decoration: none; }
 }
 
 blockquote {
